@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/main_view__buttonbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#FFDDDDDD" >
+
+        <Button
+            android:id="@+id/main_view__btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:textSize="12sp"
+            android:onClick="addButtonClicked"
+            android:text="Add" />
+
+        <Button
+            android:id="@+id/main_view__btn_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/main_view__btn_add"
+            android:textSize="12sp"
+            android:onClick="removeButtonClicked"
+            android:text="Remove" />
+
+        <Button
+            android:id="@+id/main_view__btn_grow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/main_view__btn_remove"
+            android:textSize="12sp"
+            android:onClick="growButtonClicked"
+            android:text="Grow" />
+
+        <Button
+            android:id="@+id/main_view__btn_shrink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/main_view__btn_grow"
+            android:textSize="12sp"
+            android:onClick="shrinkButtonClicked"
+            android:text="Shrink" />
+
+    </RelativeLayout>
+
+    <nl.fnord.android.listviewoverdraw.BackgroundListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFDDDDDD"  />
+
+</LinearLayout>
